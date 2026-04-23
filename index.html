@@ -7,9 +7,13 @@
   <title>Library</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/206d03d8a0.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
+
+  <!-- landing -->
+
   <section id="landing">
     <nav>
       <div class="nav__container">
@@ -21,24 +25,49 @@
             <a href="#" class="nav__link nav__link--primary">Books</a>
           </li>
         </ul>
+        <button class="btn__menu" onClick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onClick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a class="menu__link" href="#" onClick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a class="menu__link" href="#" onClick="closeMenu()">Contact</a>
+            </li>
+            <li class="menu__list">
+              <a class="menu__link" href="#features" onClick="closeMenu()">Books</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <!-- header -->
+
     <header>
       <div class="header__container">
         <div class="header__description">
-          <h1>
+          <h1 class="header__title">
             America's most awarded online library platform
           </h1>
           <h2>Find your dream book with <span class="purple">Library</span></h2>
-          <button class="btn">
-            Browse Books
-          </button>
+          <a href="#features">
+            <button class="btn">
+              Browse Books
+            </button>
+          </a>
         </div>
         <figure class="header__img--wrapper">
           <img src="./assets/Undraw_Books.svg" alt="Books">
         </figure>
       </div>
     </header>
+
   </section>
 
   <main>
@@ -348,30 +377,43 @@
 
     <section id="browse">
       <div class="container">
-        <div class="row">
+        <div class="row row__column">
           <h2 class="section__title">
             Explore more <span class="purple">Books</span>
           </h2>
-          <div class="btn__wrapper">
+          <a href="#features">
             <button class="btn">
               Browse Books
             </button>
-          </div>
+          </a>
         </div>
       </div>
     </section>
-
-    <!-- FOOTER -->
-
-    <section id="footer">
-      <div class="container">
-        <div class="row">
-          
-        </div>
-      </div>
-    </section>"
-
   </main>
 </body>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+    <div class="row row__column">
+      <a href="#">
+        <figure class="footer__logo">
+          <img src="./assets/Library.svg" class="footer__logo--img" alt="">
+        </figure>
+      </a>
+      <div class="footer__list">
+        <a href="" class="footer__link">Home</a>
+        <a href="" class="footer__link no-cursor">About</a>
+        <a href="" class="footer__link no-cursor">Contact</a>
+        <a href="" class="footer__link">Books</a>
+      </div>
+      <div class="footer__copyright">
+        Copyright &copy; 2024 Library. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 </html>
